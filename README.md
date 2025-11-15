@@ -1,16 +1,62 @@
-# React + Vite
+# RRD - React Router DOM Learning Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application built to understand and practice React Router DOM concepts, with a focus on advanced features like route loaders
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates key React Router DOM concepts:
 
-## React Compiler
+- Client-side routing and navigation
+- Dynamic routes with URL parameters
+- route loaders
+- Prefetch intent on hover for optimized data fetching
+- Component-based page structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick Start
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Visit `http://localhost:5173`
+
+## Project Structure
+
+```
+src/
+├── main.jsx          # Routing configuration with loaders
+├── App.jsx           # Layout wrapper
+├── components/
+│   ├── Home.jsx      # Home route
+│   ├── About.jsx     # About route
+│   ├── Github.jsx    # GitHub user search with API
+│   ├── User.jsx      # Dynamic route (/user/:id)
+│   ├── Header.jsx    # Navigation
+│   └── Footer.jsx    # Footer
+```
+
+## Key Learning Points
+
+- **Routing**: Navigate between Home, About, and GitHub pages
+- **Dynamic Routes**: `/user/:id` parameter handling
+- **Data Preloading**: Route loaders fetch data before component renders
+- **API Integration**: Fetch GitHub user data using REST API
+
+## Routes
+
+- `/` - Home
+- `/about` - About
+- `/github` - GitHub user search
+- `/user/:id` - User profile (dynamic)
+
+## Technologies
+
+- React 19
+- React Router DOM 7
+- Vite
+- Tailwind CSS
+
+## GitHub API Usage
+
+Searches public GitHub profiles via: `https://api.github.com/users/{username}`
