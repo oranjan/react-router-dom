@@ -8,9 +8,7 @@ This project demonstrates key React Router DOM concepts:
 
 - Client-side routing and navigation
 - Dynamic routes with URL parameters
-- route loaders
-- Prefetch intent on hover for optimized data fetching
-- Component-based page structure
+- Route loaders
 
 ## Quick Start
 
